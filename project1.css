@@ -1,0 +1,31 @@
+.headerText{
+    font-weight: bold;
+    font-size: 30px;
+    color: red;
+    margin:0;
+}
+.well p{
+    font-weight:600;
+}
+.control-label{
+    padding-right: unset;
+}
+.inputName{
+    width: 75%;
+}
+.rangeInput{
+    width: 100%;
+    width: -moz-available; /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+    width: fill-available;
+}
+.other div{
+    margin-bottom: 7px;
+}
+.glyphicon{
+    margin-left:1px;
+}
+.buttonGroup button{
+    font-size: 16px;
+    padding: 6px 70px;
+}

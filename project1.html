@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./project1.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script> 
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+</head>
+<body>
+    <div class="container">
+        <p class="headerText">Bootstrap Booking Form:</p>
+        <div class="well">
+            <p>Fill out the form and click the submit button when complete...</p>
+        </div>
+        <form role="form" id="myForm">
+            <div class="form-horizontal row">
+                <div class="col-md-6">
+                    <!-- USER PANEL -->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">User:</div>
+                        <div class="panel-body">
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="inputUsername" class="col-lg-2 control-label">Username:</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control pull-right inputName" id="inputUsername" placeholder="Type username...">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputFirstname" class="col-lg-2 control-label">First name:</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control pull-right inputName" id="inputFirstname" placeholder="Type first name...">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputLastname" class="col-lg-2 control-label">Last name:</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control pull-right inputName" id="inputLastname" placeholder="Type last name...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--CONTACT PANEL -->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Contact:</div>
+                        <div class="panel-body">
+                            <div class="input-group">
+                                <span class="input-group-addon glyphicon glyphicon-earphone"></span>
+                                <input type="text" class="form-control" id="phone" placeholder="Type phone#...">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon glyphicon glyphicon-print"></span>
+                                <input type="text" class="form-control" id="fax" placeholder="Type fax#...">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon glyphicon glyphicon-comment"></span>
+                                <input type="email" class="form-control" id="email" placeholder="Type e-mail...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Schedule:</div>
+                        <div class="panel-body">
+                            <div>
+                                <strong>Adults:</strong>
+                                <select class="form-control" id="adults">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <strong>Check-In:</strong>
+                                    <input type="date" class="form-control" id="checkin" min="1990-01-01" max="2090-12-31">
+                                </div>
+                                <div class="col-lg-6">
+                                    <strong>Check-Out:</strong>
+                                    <input type="date" class="form-control" id="checkout" min="1990-01-01" max="2090-12-31">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <strong>Days:</strong>
+                                    <input class="form-control" id="numDays" type="text" placeholder="Displays days..." disabled>
+                                </div>
+                                <div class="col-lg-6">
+                                    <strong>Cost($):</strong>
+                                    <input class="form-control" id="numCosts" type="text" placeholder="Displays cost..." disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--OTHER PANEL -->
+                <div class="col-md-6">
+                    <div class="panel panel-primary ">
+                        <div class="panel-heading">Other:</div>
+                        <div class="panel-body other">
+                            <strong>Messages:</strong>
+                            <div>
+                                <textarea class="form-control" rows="23" placeholder="Type message here..."></textarea>
+                            </div>
+                            <strong>Range:</strong>
+                            <div>
+                                <input class="rangeInput" type="range" min="1" max="100" value="50">
+                            </div>
+                            <strong>Priority:</strong>
+                            <div>
+                                <div class="radio checkbox-inline">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                        Low
+                                    </label>
+                                </div>
+                                <div class="radio checkbox-inline">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                        Med
+                                    </label>
+                                </div>
+                                <div class="radio checkbox-inline">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                        High
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="pull-right buttonGroup">
+                <button type="button" class="btn btn-primary" id="btnReset">
+                    <span class="glyphicon glyphicon-remove"></span>
+                    Reset
+                </button>
+                <button type="submit" class="btn btn-success" id="btnSubmit">
+                    <span class="glyphicon glyphicon-send"></span>
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+<!-- JavaScript functions -->
+    <script type="text/javascript">
+    //BUTTON FUNCTIONS
+        //reset button function
+        $(document).ready(function () {
+            $('#btnReset').on('click', function () {
+                toastr.options.timeOut = 1000; // 1s 
+                toastr.info('Successfully Cleared!');
+                document.getElementById("myForm").reset();
+            });
+        });
+        
+        //submit button function
+        $(document).ready(function() {
+            $('#myForm').submit(function (e) {
+                let correctCost = true;
+                $('.form-group').removeClass('has-error'); // Remove any existing error classes
+                $('.input-group').removeClass('has-error'); // Remove any existing error classes
+                // Validation
+                if ($('#inputUsername').val().trim() == '') {
+                    toastr.options.timeOut = 1000; // 1s 
+                    toastr.error('Username Is Missing!');
+                    $('#inputUsername').closest('.form-group').addClass('has-error');
+                    e.preventDefault();
+                }
+                if ($('#inputFirstname').val().trim() == '') {
+                    toastr.options.timeOut = 1000; // 1s 
+                    toastr.error('Firstname Is Missing!');
+                    $('#inputFirstname').closest('.form-group').addClass('has-error');
+                    e.preventDefault();
+                }
+                if ($('#inputLastname').val().trim() == '') {
+                    toastr.options.timeOut = 1000; // 1s 
+                    toastr.error('Lastname Is Missing!');
+                    $('#inputLastname').closest('.form-group').addClass('has-error');
+                    e.preventDefault();
+                }
+                if ($('#phone').val().trim() == '') {
+                    toastr.options.timeOut = 1000; // 1s 
+                    toastr.error('Phone Is Missing!');
+                    $('#phone').closest('.input-group').addClass('has-error');
+                    e.preventDefault();
+                }
+                if ($('#fax').val().trim() == '') {
+                    toastr.options.timeOut = 1000; // 1s 
+                    toastr.error('Fax Is Missing!');
+                    $('#fax').closest('.input-group').addClass('has-error');
+                    e.preventDefault();
+                }
+                if ($('#email').val().trim() == '') {
+                    toastr.options.timeOut = 1000; // 1s 
+                    toastr.error('Email Is Missing!');
+                    $('#email').closest('.input-group').addClass('has-error');
+                    e.preventDefault();
+                }
+                //check if cost was calculated
+                if ($('#numCosts').val() == '') {
+                    toastr.options.timeOut = 1000; // 1s 
+                    toastr.error('No Cost Was Calculated!');
+                    correctCost = false;
+                    e.preventDefault();
+                }
+                //check if cost was positive or negative
+                if ($('#numCosts').val()<0) {
+                    toastr.options.timeOut = 1000; // 1s 
+                    toastr.error('Cost Is Negative!');
+                    correctCost = false;
+                    e.preventDefault();
+                }
+                // If no errors, submit the form and show success message
+                if (!$('.form-group').hasClass('has-error') && !$('.input-group').hasClass('has-error') && correctCost) {
+                    console.log(correctCost);
+                    toastr.options.timeOut = 1000; // 1s 
+                    toastr.success('Successfully Submitted');
+                    e.preventDefault();
+                }
+            });
+        });
+
+        //caculating days and cost
+        $(document).ready(function(){
+            $('#checkin, #checkout, #adults').on('change', function () {
+                var checkinDate = moment($('#checkin').val(), 'YYYY-MM-DD');
+                var checkoutDate = moment($('#checkout').val(), 'YYYY-MM-DD');
+                var numDays = checkoutDate.diff(checkinDate, 'days');
+                var numCosts = numDays * $('#adults').val() * 150;
+                $('#numDays').val(numDays);
+                $('#numCosts').val(numCosts);
+            });
+        });
+    </script>
+</body>
+</html>
